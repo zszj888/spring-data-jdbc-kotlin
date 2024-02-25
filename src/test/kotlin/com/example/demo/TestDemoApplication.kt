@@ -11,14 +11,14 @@ import org.testcontainers.utility.DockerImageName
 @TestConfiguration(proxyBeanMethods = false)
 class TestDemoApplication {
 
-	@Bean
-	@ServiceConnection
-	fun mysqlContainer(): MySQLContainer<*> {
-		return MySQLContainer(DockerImageName.parse("mysql:latest"))
-	}
+    @Bean
+    @ServiceConnection
+    fun mysqlContainer(): MySQLContainer<*> {
+        return MySQLContainer(DockerImageName.parse("mysql:latest"))
+    }
 
 }
 
 fun main(args: Array<String>) {
-	fromApplication<DemoApplication>().with(TestDemoApplication::class).run(*args)
+    fromApplication<DemoApplication>().with(TestDemoApplication::class).run(*args)
 }

@@ -56,13 +56,16 @@ class ContactForm(companies: List<Company?>?, statuses: List<Status?>?) : FormLa
             fireEvent(
                 SaveEvent(
                     this,
-                    Contact(null,firstName.value, lastName.value, email.value, status.value, company.value)
+                    Contact(null, firstName.value, lastName.value, email.value, status.value, company.value)
                 )
             )
         }
         delete.addClickListener {
             fireEvent(
-                DeleteEvent(this, Contact(null,firstName.value, lastName.value, email.value, status.value, company.value))
+                DeleteEvent(
+                    this,
+                    Contact(null, firstName.value, lastName.value, email.value, status.value, company.value)
+                )
             )
         }
         close.addClickListener {

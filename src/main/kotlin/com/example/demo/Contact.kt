@@ -1,10 +1,10 @@
 package com.example.demo
 
 import org.springframework.data.annotation.Id
-import org.springframework.data.relational.core.mapping.Column
 
-data class Contact(@Id
-                   var id: Int? = null,
+data class Contact(
+    @Id
+    var id: Int? = null,
     val firstName: String, val lastName: String, val email: String,
-    val status: Status?,val company: Company?
+    val status: Status?, val company: Company?
 )

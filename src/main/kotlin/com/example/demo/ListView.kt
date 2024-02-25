@@ -1,8 +1,8 @@
 package com.example.demo
 
-import com.example.demo.ContactForm.*
+import com.example.demo.ContactForm.DeleteEvent
+import com.example.demo.ContactForm.SaveEvent
 import com.vaadin.flow.component.AbstractField
-import com.vaadin.flow.component.ClickEvent
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.grid.Grid
@@ -41,7 +41,6 @@ class ListView(private val service: CrmService) : VerticalLayout() {
             content.setSizeFull()
             return content
         }
-
 
 
     private val toolbar: HorizontalLayout
