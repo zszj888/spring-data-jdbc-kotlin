@@ -22,12 +22,16 @@ configurations {
 }
 
 repositories {
+	mavenLocal()
 	mavenCentral()
+	maven { url = uri("https://maven.vaadin.com/vaadin-addons") }
 }
 
 extra["vaadinVersion"] = "24.3.5"
 
 dependencies {
+	implementation("org.instancio:instancio-core:4.3.2")
+	implementation("org.vaadin.crudui:crudui:7.1.0")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("com.vaadin:vaadin-spring-boot-starter")
