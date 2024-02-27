@@ -12,7 +12,13 @@ class DemoApplication {
     @Bean
     fun init(repository: ContactRepository): ApplicationRunner {
         return ApplicationRunner {
-            repository.save(Instancio.create(Contact::class.java).apply { id = null })
+            repository.deleteAll()
+            (1..1000).forEach()   { i ->
+                repository.save(
+                    Contact(null, "John$i", "Smith$i", "fdsfd$i@fds",
+                        Status(null,"OK$i"),Company(null,"Google $i"))
+                )
+            }
         }
     }
 }

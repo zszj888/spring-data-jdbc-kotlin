@@ -8,8 +8,8 @@ import java.util.*
 interface ContactRepository : ListCrudRepository<Contact, Long> {
     @Query(
         """
-           select c from contact c where lower(c.firstName) like lower(concat('%', :searchTerm, '%')) 
-                or lower(c.lastName) like lower(concat('%', :searchTerm, '%')) 
+           select c.* from contact c where lower(c.first_name) like lower(concat('%', :searchTerm, '%')) 
+                or lower(c.last_name) like lower(concat('%', :searchTerm, '%')) 
         """
     )
     fun search(searchTerm: String): List<Contact>
