@@ -22,7 +22,6 @@ configurations {
 }
 
 repositories {
-	mavenLocal()
 	mavenCentral()
 	maven { url = uri("https://maven.vaadin.com/vaadin-addons") }
 }
@@ -30,6 +29,7 @@ repositories {
 extra["vaadinVersion"] = "24.3.5"
 
 dependencies {
+	implementation("com.github.javafaker:javafaker:1.0.2")
 	implementation("org.instancio:instancio-core:4.3.2")
 	implementation("org.vaadin.crudui:crudui:7.1.0")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
