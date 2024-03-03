@@ -1,6 +1,7 @@
 # Getting Started
 
 ### Reference Documentation
+
 For further reference, please consider the following sections:
 
 * [Official Gradle documentation](https://docs.gradle.org)
@@ -18,6 +19,7 @@ For further reference, please consider the following sections:
 * [Testcontainers](https://java.testcontainers.org/)
 
 ### Guides
+
 The following guides illustrate how to use some features concretely:
 
 * [Creating CRUD UI with Vaadin](https://spring.io/guides/gs/crud-with-vaadin/)
@@ -26,6 +28,7 @@ The following guides illustrate how to use some features concretely:
 * [Building a RESTful Web Service with Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/)
 
 ### Additional Links
+
 These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
@@ -37,6 +40,7 @@ This project has been configured to let you generate either a lightweight contai
 It is also possible to run your tests in a native image.
 
 ### Lightweight Container with Cloud Native Buildpacks
+
 If you're already familiar with Spring Boot container images support, this is the easiest way to get started.
 Docker should be installed and configured on your machine prior to creating the image.
 
@@ -53,6 +57,7 @@ $ docker run --rm -p 8080:8080 demo:0.0.1-SNAPSHOT
 ```
 
 ### Executable with Native Build Tools
+
 Use this option if you want to explore more options such as running your tests in a native image.
 The GraalVM `native-image` compiler should be installed and configured on your machine.
 
@@ -65,6 +70,7 @@ $ ./gradlew nativeCompile
 ```
 
 Then, you can run the app as follows:
+
 ```
 $ build/native/nativeCompile/demo
 ```
@@ -80,7 +86,8 @@ $ ./gradlew nativeTest
 
 ### Testcontainers support
 
-This project uses [Testcontainers at development time](https://docs.spring.io/spring-boot/docs/3.1.9/reference/html/features.html#features.testing.testcontainers.at-development-time).
+This project
+uses [Testcontainers at development time](https://docs.spring.io/spring-boot/docs/3.1.9/reference/html/features.html#features.testing.testcontainers.at-development-time).
 
 Testcontainers has been configured to use the following Docker images:
 

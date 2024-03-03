@@ -1,7 +1,6 @@
 package com.example.demo
 
 
-import com.vaadin.flow.component.AbstractField
 import com.vaadin.flow.component.Component
 import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.grid.Grid
@@ -65,8 +64,8 @@ class ListView(private val service: CrmService) : VerticalLayout() {
         grid.addClassNames("contact-grid")
         grid.setSizeFull()
         grid.setColumns("firstName", "lastName", "email")
-        grid.addColumn({ it.status?.name?:"" }).setHeader("Status")
-        grid.addColumn({ it.company?.name?:"" }).setHeader("Company")
+        grid.addColumn({ it.status?.name ?: "" }).setHeader("Status")
+        grid.addColumn({ it.company?.name ?: "" }).setHeader("Company")
         grid.columns.forEach { it.isAutoWidth = true }
     }
 

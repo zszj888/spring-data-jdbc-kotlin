@@ -11,7 +11,6 @@ import com.vaadin.flow.component.textfield.TextField
 import com.vaadin.flow.data.binder.BeanValidationBinder
 
 
-
 class ContactForm(companies: List<Company?>, statuses: List<Status?>) : FormLayout() {
     private var firstName: TextField = TextField("First name")
     private var lastName: TextField = TextField("Last name")
@@ -27,7 +26,7 @@ class ContactForm(companies: List<Company?>, statuses: List<Status?>) : FormLayo
 
     init {
         addClassName("contact-form")
-        binder.bindInstanceFields(this);
+        binder.bindInstanceFields(this)
         company.setItems(companies)
         company.setItemLabelGenerator(Company::name)
         status.setItems(statuses)

@@ -1,0 +1,12 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  mysql:
+    image: sha256:91b53e2624b431e562ed9076a9a506c5e78387f2cb4dad5968fd51ade839baa1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: QyevwD!mYWJoyUjzBKRdPvTwKtNYlkEQ
+      MYSQL_DATABASE: db_dev_temporary_parking
+    ports:
+      - "3306:3306"
