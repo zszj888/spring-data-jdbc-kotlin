@@ -16,7 +16,7 @@ class DemoApplication {
     fun init(repository: ContactRepository): ApplicationRunner {
         return ApplicationRunner {
             repository.deleteAll()
-            (1..30).forEach() { i ->
+            (1..1000).forEach() { i ->
                 repository.save(
                     Contact(
                         null, "John$i", "Smith$i", "fdsfd$i@fds",
