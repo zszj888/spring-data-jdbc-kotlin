@@ -29,6 +29,7 @@ repositories {
 extra["vaadinVersion"] = "24.3.5"
 
 dependencies {
+	implementation("in.virit:viritin:2.7.3")
 	implementation("com.github.javafaker:javafaker:1.0.2")
 	implementation("org.instancio:instancio-core:4.3.2")
 	implementation("org.vaadin.crudui:crudui:7.1.0")

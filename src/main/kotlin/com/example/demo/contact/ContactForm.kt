@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.contact
 
 import com.vaadin.flow.component.Key
 import com.vaadin.flow.component.button.Button

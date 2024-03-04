@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.contact
 
 
 import com.vaadin.flow.component.Component
@@ -12,7 +12,7 @@ import com.vaadin.flow.router.PageTitle
 import com.vaadin.flow.router.Route
 
 
-@Route(value = "")
+@Route(value = "/old")
 @PageTitle("Contacts | Vaadin CRM")
 class ListView(private val service: CrmService) : VerticalLayout() {
     private val grid = Grid(Contact::class.java)

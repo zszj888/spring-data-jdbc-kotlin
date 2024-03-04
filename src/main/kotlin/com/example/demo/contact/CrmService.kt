@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.contact
 
 import org.springframework.stereotype.Service
 
@@ -39,4 +39,5 @@ class CrmService(
     fun findAllStatuses(): List<Status> {
         return statusRepository.findAll()
     }
+
 }

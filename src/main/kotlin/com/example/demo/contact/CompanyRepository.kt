@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.contact
 
 import org.springframework.data.repository.ListCrudRepository
 
