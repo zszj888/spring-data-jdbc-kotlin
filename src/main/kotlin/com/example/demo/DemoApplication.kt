@@ -26,12 +26,6 @@ class DemoApplication {
             }
         }
     }
-
-    @Bean
-    fun rowMapper(jdbcConverter: JdbcConverter, jdbcMappingContext: JdbcMappingContext,): RowMapper<Contact> {
-        val requiredPersistentEntity = jdbcMappingContext.getRequiredPersistentEntity(Contact::class.java)
-        return EntityRowMapper<Contact>(requiredPersistentEntity, jdbcConverter);
-    }
 }
 
 fun main(args: Array<String>) {
