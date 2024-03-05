@@ -52,7 +52,6 @@ class ListView(private val service: CrmService) : VerticalLayout() {
         filterText.valueChangeMode = ValueChangeMode.LAZY
         filterText.addValueChangeListener { updateList() }
 
-
         val addContactButton = Button("Add contact")
 
         val toolbar = HorizontalLayout(filterText, addContactButton)
